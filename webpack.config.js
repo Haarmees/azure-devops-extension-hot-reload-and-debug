@@ -1,3 +1,5 @@
+// noinspection WebpackConfigHighlighting
+
 const path = require("path");
 const fs = require("fs");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -15,7 +17,7 @@ module.exports = {
     publicPath: "/dist/",
   },
   devServer: {
-    https: true,
+    server: "https",
     port: 3000,
   },
   plugins: [

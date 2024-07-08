@@ -5,5 +5,8 @@ import esLintPrettierRecommended from "eslint-plugin-prettier/recommended";
 export default tseslint.config(
     eslint.configs.recommended,
     ...tseslint.configs.recommended,
-    esLintPrettierRecommended
+    esLintPrettierRecommended,
+    {
+        ignores: ["webpack.config.js"]
+    }
 );
