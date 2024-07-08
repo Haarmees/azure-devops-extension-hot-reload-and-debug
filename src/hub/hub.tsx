@@ -15,12 +15,12 @@ interface IHubState {
   panelShown: boolean;
 }
 
-class Hub extends React.Component<{}, IHubState> {
-  constructor(props: {}) {
+class Hub extends React.Component<unknown, IHubState> {
+  constructor(props: unknown) {
     super(props);
     this.state = {
       dialogShown: false,
-      panelShown: false
+      panelShown: false,
     };
   }
 
@@ -38,10 +38,10 @@ class Hub extends React.Component<{}, IHubState> {
               id: "panel-button",
               text: "Open Panel",
               iconProps: {
-                iconName: "World"
+                iconName: "World",
               },
-              onActivate: () => this.togglePanel()
-            }
+              onActivate: () => this.togglePanel(),
+            },
           ]}
         />
         <ZeroData
@@ -74,8 +74,8 @@ class Hub extends React.Component<{}, IHubState> {
               {
                 text: "Close",
                 primary: true,
-                onClick: () => this.toggleDialog()
-              }
+                onClick: () => this.toggleDialog(),
+              },
             ]}
           >
             <ZeroData
@@ -92,8 +92,8 @@ class Hub extends React.Component<{}, IHubState> {
               {
                 text: "Close",
                 primary: true,
-                onClick: () => this.togglePanel()
-              }
+                onClick: () => this.togglePanel(),
+              },
             ]}
           >
             <ZeroData
